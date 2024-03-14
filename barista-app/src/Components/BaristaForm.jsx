@@ -28,6 +28,10 @@ const BaristaForm = () => {
   return (
     <div>
       <h2>Hi, I'd like to order a:</h2>
+      <h3>Temperature</h3>
+<div className="answer-space" >
+  {inputs["temperature"]} 
+</div>
       <form>
         <RecipeChoices
           label="temperature"
@@ -37,18 +41,30 @@ const BaristaForm = () => {
           }
           checked={inputs.temperature}
         />
+        <h3>Milk</h3>
+<div className="answer-space" >
+  {inputs["milk"]} 
+</div>
         <RecipeChoices
           label="milk"
           choices={ingredients.milk}
           handleChange={(e) => setInputs({ ...inputs, milk: e.target.value })}
           checked={inputs.milk}
         />
+        <h3>Syrup</h3>
+<div className="answer-space" >
+  {inputs["syrup"]} 
+</div>
         <RecipeChoices
           label="syrup"
           choices={ingredients.syrup}
           handleChange={(e) => setInputs({ ...inputs, syrup: e.target.value })}
           checked={inputs.syrup}
         />
+        <h3>Blended</h3>
+<div className="answer-space" >
+  {inputs["blend"]} 
+</div>
         <RecipeChoices
           label="blended"
           choices={ingredients.blended}

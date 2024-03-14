@@ -37,6 +37,27 @@ const BaristaForm = () => {
           }
           checked={inputs.temperature}
         />
+        <RecipeChoices
+          label="milk"
+          choices={ingredients.milk}
+          handleChange={(e) => setInputs({ ...inputs, milk: e.target.value })}
+          checked={inputs.milk}
+        />
+        <RecipeChoices
+          label="syrup"
+          choices={ingredients.syrup}
+          handleChange={(e) => setInputs({ ...inputs, syrup: e.target.value })}
+          checked={inputs.syrup}
+        />
+        <RecipeChoices
+          label="blended"
+          choices={ingredients.blended}
+          handleChange={(e) =>
+            setInputs({ ...inputs, blended: e.target.value })
+          }
+          checked={inputs.blended}
+        />  
+
         {/* Render other RecipeChoices components for other ingredients */}
         <button type="submit" className="button submit" onClick={onCheckAnswer}>
           Check Answer
